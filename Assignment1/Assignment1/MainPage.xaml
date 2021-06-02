@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Assignment1"
+             x:Class="Assignment1.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0"> <!-- Banner -->
+            <Label Text="Pizza App" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+        </Frame>
+
+        <Label x:Name="QuantityLabel" Text="{Binding Quantity, StringFormat='Quantity: {0}'}" FontSize="Title" Padding="30,10,30,10"/>
+
+        <Grid Margin="30,10,30,10" RowSpacing="20" x:Name="QuantityGrid">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            
+            <Button Text="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button1_Clicked"></Button>
+
+            <Button Text="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button2_Clicked"></Button>
+
+            <Button Text="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button3_Clicked"></Button>
+            
+            <Button Text="4"  Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button4_Clicked"></Button>
+
+            <Button Text="5"  Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button5_Clicked"></Button>
+            
+            <Button Text="6"  Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray"  Clicked="Button6_Clicked"></Button>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+             <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Toppings: "/>
+            <Label Grid.Column="1" Text="Size: "/>
+            <ListView x:Name="ToppingListView" Grid.Row ="1" ItemsSource="{x:Static local:Pizza.AvailableToppings}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding StringFormat='{0}'}"/>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView x:Name="SizeListView" Grid.Row ="1" Grid.Column="1" ItemsSource="{x:Static local:Pizza.AvailableSize}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding StringFormat='{0}'}"/>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+       
+    </StackLayout>
+
+</ContentPage>

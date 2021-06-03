@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1.ManagerPage">
+    <ContentPage.Content>
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                <Button x:Name="CheckCurrentButton" Text="CHECK CURRENT ORDER" Clicked="CheckCurrentButton_Clicked"></Button>
+                <Button x:Name="UpdateCurrentButton" Text="UPDATE CURRENT ORDER" Clicked="UpdateCurrentButton_Clicked"></Button>
+                <Button x:Name="PrevButton" Text="PREVIOUS ORDERS" Clicked="PrevButton_Clicked"></Button>
+                <Button x:Name="NewOrderButton" Text="NEW ORDER" Clicked="NewOrderButton_Clicked" ></Button>
+            </StackLayout>
+
+        
+    </ContentPage.Content>
+</ContentPage>

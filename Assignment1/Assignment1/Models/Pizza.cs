@@ -4,46 +4,41 @@ using System.Text;
 
 namespace Assignment1 {
 
-
     public class Pizza {
         public static readonly string[] AvailableToppings = { "Vegetables", "Meat balls", "Pepperoni", "Mushrooms" };
         public static readonly string[] AvailableSize = { "Large", "Medium", "Small", "Party" };
 
 
-        public List<string> Toppings;
-        public string Size;
+        public string Topping { get; }
+        public string Size { get; }
 
-       public Pizza() {
-            Toppings = new List<string>();
-            Size = "";
-        }
+        public double Price { get; }
 
-        public bool AddTopping(string topping) {
-            try {
-                Toppings.Add(topping);
-                return true;
+       public Pizza(string topping, string size) {
+            Topping = topping;
+            Size = size;
+            Price = 10;
+            switch (Topping) {
+                case "Vegetables":
+                case "Mushrooms":
+                    Price += 1.5;
+                    break;
+                default: //** meat
+                    Price += 3;
+                    break;
             }
-            catch {
-                return false;
-            }
-        }
-
-        public bool RemoveTopping(string topping) {
-            try {
-                Toppings.Remove(topping);
-                return true;
-            }
-            catch {
-                return false;
-            }
-        }
-
-        public bool SetSize(string size) {
-            try {
-                Size = size;
-                return true;
-            }catch {
-                return false;
+            switch (Size) {
+                case "Medium":
+                    Price += 1;
+                    break;
+                case "Large":
+                    Price += 2;
+                    break;
+                case "Party":
+                    Price += 3;
+                    break;
+                default:
+                    break;
             }
         }
     }

@@ -4,9 +4,10 @@
              x:Class="Assignment1.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0"> <!-- Banner -->
+        <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0"> <!-- Banner -->
             <Label Text="Pizza App" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
-        </Frame>
+        </Frame>  
+        
         <Grid Margin="30,10,30,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -16,7 +17,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
+            <Image x:Name="LogoImage"  Source="https://seeklogo.com/images/P/pizza-logo-42816D88BE-seeklogo.com.png"></Image>
             <Button Grid.Column="2" x:Name="ManagerPageButton" Text="Manager" Clicked="Manager_Clicked"></Button>
         </Grid>
 
@@ -37,23 +38,30 @@
             </Grid.ColumnDefinitions>
 
             
-            <Button Text="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button1_Clicked"></Button>
+            <Button Text="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button1_Clicked" BorderColor="Black"></Button>
 
-            <Button Text="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button2_Clicked"></Button>
+            <Button Text="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button2_Clicked" BorderColor="Black" ></Button>
 
-            <Button Text="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button3_Clicked"></Button>
-            
-            <Button Text="4"  Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button4_Clicked"></Button>
+            <Button Text="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button3_Clicked" BorderColor="Black" ></Button>
 
-            <Button Text="5"  Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button5_Clicked"></Button>
-            
-            <Button Text="6"  Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray"  Clicked="Button6_Clicked"></Button>
+            <Button Text="4"  Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button4_Clicked" BorderColor="Black"></Button>
 
-            <Button Text="Reset" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Reset_Clicked" TextColor="white" Background="red"></Button>
-            <Button Text="Add" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Clicked" TextColor="white" Background="Green"></Button>
+            <Button Text="5"  Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray" Clicked="Button5_Clicked" BorderColor="Black"></Button>
+
+            <Button Text="6"  Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray"  Clicked="Button6_Clicked" BorderColor="Black"></Button>
+
+            <Button Text="7"  Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray"  Clicked="Button7_Clicked" BorderColor="Black"></Button>
+
+            <Button Text="8"  Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray"  Clicked="Button8_Clicked" BorderColor="Black"></Button>
+
+            <Button Text="9"  Grid.Row="2" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray"  Clicked="Button9_Clicked" BorderColor="Black"></Button>
+
+            <Button Text="Reset" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Reset_Clicked" TextColor="white" Background="red" BorderColor="Black"></Button>
+            <Button Text="0"  Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" BackgroundColor="Gray"  Clicked="Button0_Clicked" BorderColor="Black"></Button>
+            <Button Text="Add" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Clicked" TextColor="white" Background="Green" BorderColor="Black"></Button>
         </Grid>
-        
-        <Grid>
+
+        <Grid Margin="30,10,30,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>

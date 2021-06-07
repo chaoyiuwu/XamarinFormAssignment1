@@ -52,8 +52,8 @@ namespace Assignment1 {
                 return;
             }
             om.PlaceCurrentOrder();
-
-            await Navigation.PushAsync(new MainPage(om));
+            await DisplayAlert("Your order has been placed.", string.Format("Order placed time: {0}", om.PlacedOrders.Last().PlacedTime), "OK");
+            await Navigation.PopAsync();
         }
 
         private void DeleteItemButton_Clicked(object sender, EventArgs e) {

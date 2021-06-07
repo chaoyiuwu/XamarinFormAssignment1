@@ -19,12 +19,14 @@ namespace Assignment1 {
         }
 
         private async void UpdateCurrentButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new MainPage(om));
+            //await Navigation.PushAsync(new MainPage(om));
+            await Navigation.PopAsync();
         }
 
         private async void NewOrderButton_Clicked(object sender, EventArgs e) {
             om.StartNewOrder();
-            await Navigation.PushAsync(new MainPage(om));
+            //await Navigation.PushAsync(new MainPage(om));
+            await Navigation.PopAsync();
         }
 
         private async void PrevButton_Clicked(object sender, EventArgs e) {

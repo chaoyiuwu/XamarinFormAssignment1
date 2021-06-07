@@ -94,6 +94,22 @@ namespace Assignment1 {
             Quantity = 6;
         }
 
+        private void Button7_Clicked(object sender, EventArgs e) {
+            Quantity = 7;
+        }
+
+        private void Button8_Clicked(object sender, EventArgs e) {
+            Quantity = 8;
+        }
+
+        private void Button9_Clicked(object sender, EventArgs e) {
+            Quantity = 9;
+        }
+
+        private void Button0_Clicked(object sender, EventArgs e) {
+            Quantity = 0;
+        }
+
         private void Reset_Clicked(object sender, EventArgs e) {
             Quantity = 0;
             SelectedTopping = "";
@@ -119,7 +135,9 @@ namespace Assignment1 {
             om.CurrentOrder.AddPizzas(Quantity, new Pizza(SelectedTopping, SelectedSize));
 
             DisplayAlert("Success", string.Format("{0} {1}-size pizza with {2} has been added to your order.\n" +
-                "Your order now has {3} pizza(s).", Quantity, SelectedSize, SelectedTopping, om.CurrentOrder.Pizzas.Sum(p => p.Quantity)), "OK");
+                "Your order now has {3} pizza(s).\n" +
+                "The total is now ${4}.", Quantity, SelectedSize, SelectedTopping, om.CurrentOrder.Pizzas.Sum(p => p.Quantity),
+                om.CurrentOrder.Pizzas.Sum(p => p.Quantity * p.Pizza.Price)), "OK");
         }
 
         private async void Manager_Clicked(object sender, EventArgs e) {
